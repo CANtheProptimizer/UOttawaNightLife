@@ -2,7 +2,7 @@
 
 // Database credentials
 $db_host = 'localhost';          
-$db_name = 'uottawa_nightlife';  
+$db_name = 'uottawa_nightlife_new';  
 $db_user = 'root';               
 $db_pass = '';                   
 
