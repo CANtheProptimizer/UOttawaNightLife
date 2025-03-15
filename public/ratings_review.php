@@ -42,3 +42,12 @@ footer {
 }    
     </style>
   </head>
+
+
+<div class="review">
+    <h1>Happy Fish</h1>
+    <p>Rating: ★★★☆☆</p>
+    <p><b>Dinner, After-hours, Drinks</b></p>
+    <p>"Cozy place with a friendly vibe. The menu is diverse, though some dishes are hit or miss. Great for a casual night out."</p>
+    <p>Price: $$ - $$$</p>
+</div>
