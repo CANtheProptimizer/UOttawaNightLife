@@ -20,6 +20,12 @@ header {
         text-align: center;
         }
 
+section {
+    padding: 20px;
+    line-height: 1.4;
+    background-color: #878a8c;
+    margin: 20px;
+}
     
 footer {
         text-align: center;
