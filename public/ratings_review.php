@@ -19,6 +19,7 @@ header {
         padding: 10px 0;
         text-align: center;
         }
+
     
 footer {
         text-align: center;
