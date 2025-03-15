@@ -33,6 +33,12 @@ footer {
         color: #494f52
         padding: 10px
 }
-    
+.login-btn {
+    background-color: #0b6aa0;
+    color: #ffffff;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-family: 'Poppins', sans-serif;
+}    
     </style>
   </head>
