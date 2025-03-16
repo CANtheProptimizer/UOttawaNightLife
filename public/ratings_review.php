@@ -43,6 +43,8 @@ footer {
     </style>
   </head>
 
+<body>
+  
 
 <div class="review">
     <h1><b>Happy Fish</b></h1>
@@ -151,4 +153,7 @@ footer {
     <p>"Great concept combining restaurant, dart, escape room and boardgames. We enjoyed oue time. Food is ok, pub quality but the ambience and people are friendly. Recommend visiting."</p>
     <p>Price: $$</p>
 </div>  
+
+  </body>
+</html>
   
