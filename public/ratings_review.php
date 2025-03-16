@@ -119,3 +119,12 @@ footer {
     <p>Price: $$ - $$$</p>
 </div>
   
+          <div class="review">
+    <h1>House of TARG</h1>
+    <p>Rating: ★★★★★</p>
+    <p><b>Great cocktails, Live performances, Dancing</b></b></p>
+    <p>"Targ is always a great time. The atmosphere is lively and casual. If you go early on the free-play days, there are lots of machines available, although it gets busy as the day goes on. The staff is always friendly and helpful. The pinball machines are well maintained and there is a great variety of games from all different points in time. Don't forget to try their famous pierogies, which never disappoint!".</p>
+    <p>Price: $$ - $$$</p>
+</div>
+  
+  
