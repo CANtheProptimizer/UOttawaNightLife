@@ -101,4 +101,13 @@ footer {
     <p>"Had a blast at Lowertown! Went with some friends for drinks and a hot pretzel. Fun atmosphere."</p>
     <p>Price: $$ - $$$</p>
 </div>
+
+          <div class="review">
+    <h1>The Senate Tavern on Clarencet</h1>
+    <p>Rating: ★★★★☆</p>
+    <p><b>Cozy, Sports-themed, Canadian pub grub & draft beers</b></p>
+    <p>"Great beer selection. Love the craft. Beer amazing. Washroom very clean."</p>
+    <p>Price: $$ - $$$</p>
+</div>
+
   
