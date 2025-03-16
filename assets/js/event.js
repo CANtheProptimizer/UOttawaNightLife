@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json()) // gets the PHP response in JSON format to parse for errors
 
         .then(data => {
-            let messageDiv = document.getElementById("message");
+            let messageDiv = document.getElementById("statusmessage");
             if (data.status === "success") {
                 messageDiv.innerHTML = "<p class='success-message'>" + data.message + "</p>";
-                document.getElementById("eventForm").reset(); // Clears form after success
+                document.getElementById("eventForm").reset(); // clears the form after success
             } else {
                 messageDiv.innerHTML = "<p class='error-message'>" + data.message + "</p>";
             }
