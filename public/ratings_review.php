@@ -129,7 +129,7 @@ footer {
 
           <div class="review">
     <h1><b>Hangout</b></h1>
-    <p>Rating: ★★★★☆</p>
+    <p>Rating: </p>
     <p>Bubble Tea, Shaved Ice, & Brick Toasts with board and arcade games</p>
     <p>"This is a really interesting, and AFFORDABLE, place to hang out. I love the intersection of niches that are found here:  boardgames, ramen, and bumble tea :)"</p>
     <p>Price: $</p>
@@ -141,6 +141,14 @@ footer {
     <p>Rating: ★★★★★</p>
     <p>Outdoor seating, Great cocktails, Live music</p>
     <p>"Good for bar food, decent drink options. Lots of board games. Fun 80s/90s Playlist."</p>
+    <p>Price: $$</p>
+</div>  
+
+            <div class="review">
+    <h1><b>Manor Lounge</b></h1>
+    <p>Rating: ★★★★☆</p>
+    <p>Happy hour food, Great cocktails, Vegan options</p>
+    <p>"Great concept combining restaurant, dart, escape room and boardgames. We enjoyed oue time. Food is ok, pub quality but the ambience and people are friendly. Recommend visiting."</p>
     <p>Price: $$</p>
 </div>  
   
