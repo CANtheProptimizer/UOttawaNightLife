@@ -113,7 +113,7 @@ footer {
           <div class="review">
     <h1>Level One Game Pub</h1>
     <p>Rating: ★★★★★</p>
-    <p><b>Great cocktails, Vegan options, Live music</b></b></p>
+    <p><b>Great cocktails, Vegan options, Live music</b></p>
     <p>"The atmosphere here is awesome! This place has a great selection of board games and video games too! The staff here are very friendly and the drinks and food are super tasty. Lots of space in the venue as well for activities.
 "</p>
     <p>Price: $$ - $$$</p>
@@ -122,9 +122,25 @@ footer {
           <div class="review">
     <h1>House of TARG</h1>
     <p>Rating: ★★★★★</p>
-    <p><b>Great cocktails, Live performances, Dancing</b></b></p>
+    <p><b>Great cocktails, Live performances, Dancing</b></p>
     <p>"Targ is always a great time. The atmosphere is lively and casual. If you go early on the free-play days, there are lots of machines available, although it gets busy as the day goes on. The staff is always friendly and helpful. The pinball machines are well maintained and there is a great variety of games from all different points in time. Don't forget to try their famous pierogies, which never disappoint!".</p>
     <p>Price: $$ - $$$</p>
 </div>
-  
+
+          <div class="review">
+    <h1>Hangout</h1>
+    <p>Rating: ★★★★☆</p>
+    <p><b>Bubble Tea, Shaved Ice, & Brick Toasts with board and arcade games</b></p>
+    <p>"This is a really interesting, and AFFORDABLE, place to hang out. I love the intersection of niches that are found here:  boardgames, ramen, and bumble tea :)"</p>
+    <p>Price: $</p>
+</div>
+
+
+          <div class="review">
+    <h1>The Gilmour</h1>
+    <p>Rating: ★★★★★</p>
+    <p><b>Outdoor seating, Great cocktails, Live music</b></p>
+    <p>"Good for bar food, decent drink options. Lots of board games. Fun 80s/90s Playlist."</p>
+    <p>Price: $$</p>
+</div>  
   
