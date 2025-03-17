@@ -44,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $feedback = "Error: " . $e->getMessage();
             }
         }
-
     } elseif ($form_type === 'register') {
         // --- REGISTRATION LOGIC ---
         $email     = $_POST['email'] ?? '';
@@ -87,15 +86,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!-- 3. Include your navbar -->
 <?php require_once '../includes/navbar.php'; ?>
 
-<!-- (Optional) Another stylesheet if you have one in /public/assets -->
-<!-- <link rel="stylesheet" href="assets/styles.css"> -->
-
 <div class="container">
     <h1>Welcome to uOttawa NightLife!</h1>
     
     <!-- 4. Display any feedback (errors, success messages) -->
     <?php if (!empty($feedback)): ?>
-        <p style="color:red;"><?php echo htmlspecialchars($feedback); ?></p>
+        <p style="color:red;"> <?php echo htmlspecialchars($feedback); ?> </p>
     <?php endif; ?>
 
     <!-- LOGIN FORM -->
@@ -112,7 +108,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Login</button>
     </form>
 
-    <hr>
+    <!-- Add spacing between sections -->
+    <br><br><hr><br><br>
 
     <!-- REGISTRATION FORM -->
     <h2>Create an Account</h2>
