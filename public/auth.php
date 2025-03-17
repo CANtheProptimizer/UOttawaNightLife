@@ -141,22 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br><br><hr><br><br>
 
      
-    <div class="form-box">
-        <h2>Create an Event</h2>
-        <form method="POST" action="create_event.php">
-            <label for="event_name">Event Name:</label>
-            <input type="text" id="event_name" name="event_name" required>
 
-            <label for="event_date">Event Date:</label>
-            <input type="date" id="event_date" name="event_date" required>
-
-            <label for="event_location">Event Location:</label>
-            <input type="text" id="event_location" name="event_location" required>
-
-            <button type="submit">Create Event</button>
-        </form>
-    </div>
-</div>
 
 </body>
 </html>
