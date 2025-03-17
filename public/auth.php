@@ -80,6 +80,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login / Register</title>
     <!-- Main stylesheet (adjust path if needed) -->
     <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .form-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -95,18 +103,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 
     <!-- LOGIN FORM -->
-    <h2>Login</h2>
-    <form method="POST" action="auth.php">
-        <input type="hidden" name="form_type" value="login">
+    <div class="form-box">
+        <h2>Login</h2>
+        <form method="POST" action="auth.php">
+            <input type="hidden" name="form_type" value="login">
 
-        <label for="login_email">Email:</label>
-        <input type="email" id="login_email" name="email" required>
+            <label for="login_email">Email:</label>
+            <input type="email" id="login_email" name="email" required>
 
-        <label for="login_password">Password:</label>
-        <input type="password" id="login_password" name="password" required>
+            <label for="login_password">Password:</label>
+            <input type="password" id="login_password" name="password" required>
 
-        <button type="submit">Login</button>
-    </form>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 
     <!-- Add spacing between sections -->
     <br><br><hr><br><br>
@@ -132,19 +142,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br><br><hr><br><br>
 
     <!-- CREATE EVENT FORM (Placeholder if applicable) -->
-    <h2>Create an Event</h2>
-    <form method="POST" action="create_event.php">
-        <label for="event_name">Event Name:</label>
-        <input type="text" id="event_name" name="event_name" required>
+    <div class="form-box">
+        <h2>Create an Event</h2>
+        <form method="POST" action="create_event.php">
+            <label for="event_name">Event Name:</label>
+            <input type="text" id="event_name" name="event_name" required>
 
-        <label for="event_date">Event Date:</label>
-        <input type="date" id="event_date" name="event_date" required>
+            <label for="event_date">Event Date:</label>
+            <input type="date" id="event_date" name="event_date" required>
 
-        <label for="event_location">Event Location:</label>
-        <input type="text" id="event_location" name="event_location" required>
+            <label for="event_location">Event Location:</label>
+            <input type="text" id="event_location" name="event_location" required>
 
-        <button type="submit">Create Event</button>
-    </form>
+            <button type="submit">Create Event</button>
+        </form>
+    </div>
 </div>
 
 </body>
