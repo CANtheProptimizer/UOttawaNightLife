@@ -27,12 +27,6 @@ section {
     margin: 20px;
 }
     
-footer {
-        text-align: center;
-        background-color: #aaacad
-        color: #494f52
-        padding: 10px
-}
 .login-btn {
     background-color: #0b6aa0;
     color: #ffffff;
