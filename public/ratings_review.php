@@ -44,6 +44,17 @@ footer {
   </head>
 
 <body>
+      <div class="bg">
+    <header>
+                <a href="create_event.php">Create Event</a>
+                <a href="create_profile.php">Create Profile</a>
+                <a href="index.php">Index</a>
+                <a href="login.php" class="login-btn">Login</a>
+                <a href="logout.php">Logout</a>
+                <a href="search_events.php">Search Events</a>
+    </div>
+            
+
   
 
 <div class="review">
