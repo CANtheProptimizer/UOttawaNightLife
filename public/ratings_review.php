@@ -53,6 +53,10 @@ footer {
                 <a href="logout.php">Logout</a>
                 <a href="search_events.php">Search Events</a>
     </div>
+
+<section>
+            <h1><center>uOttawa NightLife Reviews</center></h1>
+</section>
             
 
   
