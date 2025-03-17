@@ -168,6 +168,94 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
+          <div class="review">
+    <h1><b>Wise Town Cafe</b></h1>
+    <p>Rating: ★★★☆☆</p>
+    <p>Coffee & Tea, Lounges, Sandwhiches</p>
+    <p>"The inside of this cafe is stunning. It is so beautiful. Funky wooden furniture, plants galore, really nice vibe. A great place for a date or to hang out with friends."</p>
+    <p>Price: $$</p>
+</div>  
+
+<div class="review">
+    <h1><b>Equator Coffee</b></h1>
+    <p>Rating: ★★★★★</p>
+    <p>Coffee & Tea</p>
+    <p>"Best coffee, great treats, awesome service! It's my favourite place for coffee any day. Also their take out coffee beans are just as amazingly delicious."</p>
+    <p>Price: $$</p>
+</div>  
+
+<div class="review">
+    <h1><b>Little Victories Coffee Roasters</b></h1>
+    <p>Rating: ★★★☆☆</p>
+    <p>Coffee & Tea, Lounges, Coffee Roasteries</p>
+    <p>"Great little coffee shop with very friendly service. Quality of coffee is better than many shops in the city."</p>
+    <p>Price: $$</p>
+</div>  
+
+<div class="review">
+    <h1><b>Happy Goat Coffee Company</b></h1>
+    <p>Rating: ★★★★☆</p>
+    <p>Coffee & Tea</p>
+    <p>"If you're looking for a new place to meet friends for either coffee or a glass of wine, try this cozy, interesting hidden (for now) gem. Fun, funky and relaxed design--not your usual coffee chain experience."</p>
+    <p>Price: $$</p>
+</div>  
+
+<div class="review">
+    <h1><b>The Ministry of Coffee</b></h1>
+    <p>Rating: ★★★★☆</p>
+    <p>Coffee & Tea</p>
+    <p>"This is a great example of an indie coffee shop. The drinks were great, the ambiance was relaxed. Overall enjoyable."</p>
+    <p>Price: $$</p>
+</div>  
+
+<div class="review">
+    <h1><b>Drip House</b></h1>
+    <p>Rating: ★★★★☆</p>
+    <p>Coffee & Tea</p>
+    <p>"It's very pretty and spacious inside. Definitely a great cafe to hangout it. I've had a few items from here. Their blueberry muffin ($3.50) was super moist and very tasty. "</p>
+    <p>Price: $$$</p>
+</div>  
+
+<div class="review">
+    <h1><b>El Camino</b></h1>
+    <p>Rating: ★★★★☆</p>
+    <p>Coffee & Tea</p>
+    <p>"It's very pretty and spacious inside. Definitely a great cafe to hangout it. I've had a few items from here. Their blueberry muffin ($3.50) was super moist and very tasty. "</p>
+    <p>Price: $$$</p>
+</div>  
+
+<div class="review">
+    <h1><b>The Brig Pub</b></h1>
+    <p>Rating: ★★★★☆</p>
+    <p>Pubs, American, Canadian</p>
+    <p>"Went to The Brig last night after wandering the neighbourhood looking for somewhere to eat and relax. Totally fit the bill. Food was really tasty"</p>
+    <p>Price: $$</p>
+</div>  
+
+<div class="review">
+    <h1><b>The Brig Pub</b></h1>
+    <p>Rating: ★★★★☆</p>
+    <p>Pubs, American, Canadian</p>
+    <p>"Went to The Brig last night after wandering the neighbourhood looking for somewhere to eat and relax. Totally fit the bill. Food was really tasty"</p>
+    <p>Price: $$</p>
+</div>  
+
+<div class="review">
+    <h1><b>Father & Sons</b></h1>
+    <p>Rating: ★★★☆☆</p>
+    <p>Pubs, Breakfast & Brunch, Canadian</p>
+    <p>"This place is perfect for the Ottawa U student, or any student/fun/chill person. The prices are low, casual atmosphere, daily specials, off the beaten path of patio central in the market and lots of drinks."</p>
+    <p>Price: $$</p>
+</div>  
+
+<div class="review">
+    <h1><b>The Grand Pizzeria</b></h1>
+    <p>Rating: ★★★☆☆</p>
+    <p>Italian, Pizza, Bars</p>
+    <p>"Overall ambiance was great and good service. The patio was nice and had a relaxing atmosphere in the Byward Market. Great for those who love authentic Italian pizza."</p>
+    <p>Price: $$</p>
+</div>  
+
   </body>
 </html>
   
