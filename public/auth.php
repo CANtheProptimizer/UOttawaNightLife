@@ -96,7 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="container">
     <h1>Welcome to uOttawa NightLife!</h1>
     
-    <!--  Display any feedback  -->
     <?php if (!empty($feedback)): ?>
         <p style="color:red;"> <?php echo htmlspecialchars($feedback); ?> </p>
     <?php endif; ?>
