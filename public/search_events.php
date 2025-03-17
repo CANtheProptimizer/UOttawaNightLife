@@ -52,7 +52,7 @@ $conn->close();
 <body>
 <body>
     <?php require_once '../includes/navbar.php'; ?>
-    
+    <link rel="stylesheet" href="assets/styles.css">
 
     <div class="container">
         <h2>Search Events</h2>
