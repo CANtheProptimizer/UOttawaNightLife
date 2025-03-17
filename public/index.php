@@ -1,7 +1,16 @@
 <?php
+// index.php
+
+// Start session and include dependencies
 session_start();
-require_once '../includes/config.php';  // sets up $pdo
-require_once '../includes/session.php';
+require_once '../includes/config.php';   // sets up $pdo
+require_once '../includes/session.php';  // ensures session is started, etc.
+
+// Redirect if not logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: auth.php");
+    exit;
+}
 
 // Check if an event was just created and display a confirmation message
 if (isset($_GET['event_created'])) {
@@ -22,10 +31,12 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Events - uOttawa NightLife</title>
-    <link rel="stylesheet" href="assets/styles.css">
-
+    <link rel="stylesheet" href="assets/styles.css"> 
+    <!-- Adjust the path if your CSS is located elsewhere, 
+         e.g. '../assets/css/styles.css' -->
 </head>
 <body>
+
     <!-- Include the navigation bar -->
     <?php require_once '../includes/navbar.php'; ?>
 
@@ -40,6 +51,7 @@ try {
     <!-- Main content container -->
     <div class="container">
         <h1>All Events</h1>
+
         <?php if ($events): ?>
             <ul>
                 <?php foreach ($events as $event): ?>
@@ -54,7 +66,9 @@ try {
         <?php else: ?>
             <p>No events found. Create one!</p>
         <?php endif; ?>
+
         <a href="create_event.php">Create a New Event</a>
     </div>
+
 </body>
 </html>

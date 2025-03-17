@@ -38,6 +38,15 @@ section {
   </head>
 
 <body>
+<?php
+require_once '../includes/session.php'; // or wherever session is started
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: auth.php");
+    exit;
+}
+?>
+
 <body>
     <?php require_once '../includes/navbar.php'; ?>
     <link rel="stylesheet" href="assets/styles.css">
