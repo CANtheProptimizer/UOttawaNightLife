@@ -38,6 +38,10 @@ section {
   </head>
 
 <body>
+<body>
+    <?php require_once '../includes/navbar.php'; ?>
+    <!-- rest of your page content -->
+
       <div class="bg">
     <header>
                 <a href="create_event.php">Create Event</a>

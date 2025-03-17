@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "event_db";
+$dbname = "uottawa_nightlife";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -50,6 +50,10 @@ $conn->close();
     </style>
 </head>
 <body>
+<body>
+    <?php require_once '../includes/navbar.php'; ?>
+    
+
     <div class="container">
         <h2>Search Events</h2>
         <form method="GET" class="search-box">
@@ -63,7 +67,8 @@ $conn->close();
                 <div class="event">
                     <h4><?php echo htmlspecialchars($event['title']); ?></h4>
                     <p><strong>Location:</strong> <?php echo htmlspecialchars($event['location']); ?></p>
-                    <p><strong>Date:</strong> <?php echo htmlspecialchars($event['date']); ?></p>
+                    <!-- Updated to match your column name -->
+                    <p><strong>Date:</strong> <?php echo htmlspecialchars($event['event_date']); ?></p>
                     <p><strong>Description:</strong> <?php echo htmlspecialchars($event['description']); ?></p>
                 </div>
             <?php endforeach; ?>

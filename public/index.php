@@ -1,14 +1,14 @@
 <?php
 session_start();
-require_once '../includes/config.php';
+require_once '../includes/config.php'; // sets up $pdo
 require_once '../includes/session.php';
 
-// Show success message if redirected after creating an event
+// Check if event was just created
 if (isset($_GET['event_created'])) {
     echo "<p style='color: green;'>Event created successfully!</p>";
 }
 
-// Fetch all events from the database
+// Fetch all events
 try {
     $stmt = $pdo->query("SELECT * FROM events ORDER BY event_date ASC");
     $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -26,6 +26,18 @@ try {
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
+<body>
+    <?php require_once '../includes/navbar.php'; ?>
+    <!-- rest of your page content -->
+
+    <header>
+        <!-- SEARCH BAR that goes to search_events.php -->
+        <form method="GET" action="search_events.php" style="margin-bottom: 20px;">
+            <input type="text" name="keyword" placeholder="Search events..." />
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
     <h1>All Events</h1>
 
     <?php if ($events): ?>
