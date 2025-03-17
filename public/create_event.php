@@ -1,11 +1,11 @@
 <?php
 session_start();
-require_once '../includes/config.php';  // <-- Make sure this sets up $pdo
+require_once '../includes/config.php';  
 require_once '../includes/session.php';
 
 // If the form is submitted, process the data
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Replace this with the real session user ID
+    
     $user_id     = $_POST['user_id'] ?? 1;
     $title       = $_POST['title'] ?? '';
     $description = $_POST['description'] ?? '';
@@ -13,14 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $event_date  = $_POST['event_date'] ?? '';
 
     try {
-        // Insert into your 'events' table (adjust column names if needed)
+        
         $stmt = $pdo->prepare("
             INSERT INTO events (user_id, title, description, location, event_date)
             VALUES (?, ?, ?, ?, ?)
         ");
         $stmt->execute([$user_id, $title, $description, $location, $event_date]);
 
-        // Redirect to index.php with a success parameter
+        
         header('Location: index.php?event_created=1');
         exit;
     } catch (PDOException $e) {

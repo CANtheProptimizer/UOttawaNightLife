@@ -39,7 +39,7 @@ section {
 
 <body>
 <?php
-require_once '../includes/session.php'; // or wherever session is started
+require_once '../includes/session.php'; 
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: auth.php");
@@ -224,20 +224,13 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$$</p>
 </div>  
 
-<div class="review">
+< class="review">
     <h1><b>The Brig Pub</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Pubs, American, Canadian</p>
     <p>"Went to The Brig last night after wandering the neighbourhood looking for somewhere to eat and relax. Totally fit the bill. Food was really tasty"</p>
     <p>Price: $$</p>
-</div>  
 
-<div class="review">
-    <h1><b>The Brig Pub</b></h1>
-    <p>Rating: ★★★★☆</p>
-    <p>Pubs, American, Canadian</p>
-    <p>"Went to The Brig last night after wandering the neighbourhood looking for somewhere to eat and relax. Totally fit the bill. Food was really tasty"</p>
-    <p>Price: $$</p>
 </div>  
 
 <div class="review">

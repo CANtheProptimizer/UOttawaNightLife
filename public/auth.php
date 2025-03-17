@@ -1,24 +1,23 @@
 <?php
 // auth.php
 
-// 1. Include your config and session setup
-require_once '../includes/config.php';  // This should set up $pdo
-require_once '../includes/session.php'; // Contains session_start() etc.
+
+require_once '../includes/config.php';  
+require_once '../includes/session.php'; 
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// We'll store any feedback (errors, success messages) here
 $feedback = '';
 
-// 2. Handle form submissions
+//  Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Which form is submitted? (login or register)
+    
     $form_type = $_POST['form_type'] ?? '';
 
     if ($form_type === 'login') {
-        // --- LOGIN LOGIC ---
+        
         $email    = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
 
@@ -32,9 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 if ($user) {
-                    // Log in
+                    
                     $_SESSION['user_id'] = $user['user_id'];
-                    // Redirect to homepage
+                    
                     header("Location: index.php");
                     exit;
                 } else {
@@ -45,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     } elseif ($form_type === 'register') {
-        // --- REGISTRATION LOGIC ---
+        
         $email     = $_POST['email'] ?? '';
         $password  = $_POST['password'] ?? '';
         $full_name = $_POST['full_name'] ?? '';
@@ -78,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Login / Register</title>
-    <!-- Main stylesheet (adjust path if needed) -->
+    
     <link rel="stylesheet" href="../assets/styles.css">
     <style>
         .form-box {
@@ -91,13 +90,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<!-- 3. Include your navbar -->
+
 <?php require_once '../includes/navbar.php'; ?>
 
 <div class="container">
     <h1>Welcome to uOttawa NightLife!</h1>
     
-    <!-- 4. Display any feedback (errors, success messages) -->
+    <!--  Display any feedback  -->
     <?php if (!empty($feedback)): ?>
         <p style="color:red;"> <?php echo htmlspecialchars($feedback); ?> </p>
     <?php endif; ?>
@@ -118,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-    <!-- Add spacing between sections -->
+   
     <br><br><hr><br><br>
 
     <!-- REGISTRATION FORM -->
@@ -138,10 +137,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Register</button>
     </form>
 
-    <!-- Add spacing before Create Event section -->
+    
     <br><br><hr><br><br>
 
-    <!-- CREATE EVENT FORM (Placeholder if applicable) -->
+     
     <div class="form-box">
         <h2>Create an Event</h2>
         <form method="POST" action="create_event.php">
