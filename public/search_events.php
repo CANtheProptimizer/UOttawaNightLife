@@ -183,6 +183,9 @@ function fetchReviews($conn, $event_id) {
             <p>No events found.</p>
         <?php endif; ?>
     </div>
+
+    <script src="assets/script.js"></script>
+
 </body>
 </html>
 <?php

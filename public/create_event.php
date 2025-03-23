@@ -49,5 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="datetime-local" name="event_date" required>
         <button type="submit">Create Event</button>
     </form>
+
+    <script src="assets/script.js"></script>
+
 </body>
 </html>
