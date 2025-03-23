@@ -100,7 +100,7 @@ function fetchReviews($pdo, $event_id) {
         <?php if (!empty($events)): ?>
             <ul style="list-style-type: none; padding: 0;">
                 <?php foreach ($events as $event): ?>
-                    <li style="margin-bottom: 40px; border-bottom: 1px solid #ccc; padding-bottom: 20px;">
+                    <li class="eventListItem">
                         <h3><?php echo htmlspecialchars($event['title']); ?></h3>
                         <p><?php echo htmlspecialchars($event['description']); ?></p>
                         <p><strong>Location:</strong> <?php echo htmlspecialchars($event['location']); ?></p>
