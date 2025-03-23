@@ -75,3 +75,30 @@ ul li {
 ul li h3 {
   margin: 0 0 5px;
 }
+
+#createEventLink {
+  max-height: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  color:#f5f5f5;
+  background-color: #0056b3;
+  padding: 15px 25px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+  max-width: 1040px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+#allEventsHeader {
+  margin: 0;
+}

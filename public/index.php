@@ -82,8 +82,14 @@ function fetchReviews($pdo, $event_id) {
     <!-- Include your navbar -->
     <?php include '../includes/navbar.php'; ?>
 
+    <div class="flexbox">
+        <h1 id="allEventsHeader">All Events</h1>
+
+        <!-- Link to create a new event -->
+        <a href="create_event.php" id="createEventLink">Create a New Event</a>
+    </div>
+    
     <div class="container">
-        <h1>All Events</h1>
 
         <!-- Display feedback  -->
         <?php if (!empty($feedback)): ?>
@@ -164,8 +170,6 @@ function fetchReviews($pdo, $event_id) {
             <p>No events found. Create one!</p>
         <?php endif; ?>
 
-        <!-- Link to create a new event -->
-        <a href="create_event.php">Create a New Event</a>
     </div>
 </body>
 </html>
