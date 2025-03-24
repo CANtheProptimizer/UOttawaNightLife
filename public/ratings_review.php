@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-      <meta name="viewport", content="width=device-width, height="device-height", initial-scale="1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> uOttawa NightLife </title>
   <style>
 body {
@@ -40,7 +40,7 @@ section {
     border-radius: 5px;
     margin: 20px;
 }
-#sortOptions {
+sortOptions {
     text-align: center;
     background-color:#878a8c;
     border-radius: 5px;
@@ -58,8 +58,6 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 ?>
-
-<body>
     <?php require_once '../includes/navbar.php'; ?>
     <link rel="stylesheet" href="assets/styles.css">
 
@@ -226,7 +224,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-        `<div class="review" data-add-date="2025-03-09" data-rating="4.5">
+         <div class="review" data-add-date="2025-03-09" data-rating="4.5">
     <h1><b>Drip House</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Coffee & Tea</p>
@@ -269,13 +267,14 @@ if (!isset($_SESSION['user_id'])) {
 
 <script>
 function getReviews() {
-    const reviewElements = document.querySelectorAll(".reviews");
+    const reviewElements = document.querySelectorAll(".review");
     return Array.from(reviewElements).map(review => ({
     element: review, 
-    name: review.querySelector("h1").textContent.replace("",""),
+    name: review.querySelector("h1").textContent,
     date: review.getAttribute("data-add-date"),
     rating: parseFloat(review.getAttribute("data-rating"))
-}))
+}));
+}
 
 function displayReviews(reviews) {
     const list = document.getElementById("nightlifeReviews");
@@ -284,17 +283,17 @@ function displayReviews(reviews) {
 }
 
 const comparators = {
-  Chronological: (a, b) =>new Date(a.date) - new Date(b.date),
+  Chronological: (a, b) => new Date(a.date) - new Date(b.date),
   Alphabetical: (a, b) => a.name.localeCompare(b.name),
   Ratings: (a,b) => b.rating - a.rating
-    }
+};
 
   function sortReviews(criterion) {
     const reviews = getReviews();
     displayReviews(reviews.sort(comparators[criterion]));
   }
 
-document.getElementById("sortFilter").addEventListener("change", (e) => sortReviews(e.target.value);
+document.getElementById("sortFilter").addEventListener("change", (e) => sortReviews(e.target.value));
 displayReviews(getReviews());
 
     </script>
