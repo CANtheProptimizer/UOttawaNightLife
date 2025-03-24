@@ -85,7 +85,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
 <div class="review">
-    <h1><b>Lieutenant's Pump</b></h1>
+    <h1><b>Lieutenant's Pump</b></h1> data-add-date="2025-03-02" data-rating="4.3"
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Trivia Night</p>
     <p>"Classic Brit-Canadian pub. It's much larger than it looks from the outside. Very dark inside but friendly atmosphere. Good pub fare and great pints."</p>
@@ -93,7 +93,7 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
   <div class="review">
-    <h1><b>El Furniture warehouse</b></h1>
+    <h1><b>El Furniture warehouse</b></h1> data-add-date="2025-03-03" data-rating="4.0"
     <p>Rating: ★★★★☆</p>
     <p>Happy hour food, Great cocktails, Doesn't accept reservations</p>
     <p>"Nice place to have some drinks and hang out. Prices are decent. Only negative was the Food was alright at best."</p>
@@ -101,7 +101,7 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
     <div class="review">
-    <h1><b>The Nelson Pub & Eatery</b></h1>
+    <h1><b>The Nelson Pub & Eatery</b></h1> 
     <p>Rating: ★★★★★</p>
     <p>Great cocktails, Good for watching sports, Wi-Fi</p>
     <p>"I love this place. The service is great, menu is affordable, and the drinks are delicious. Food is solid too!"</p>
