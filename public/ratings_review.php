@@ -56,9 +56,15 @@ if (!isset($_SESSION['user_id'])) {
 <section>
             <h1><center>uOttawa NightLife Reviews</center></h1>
 </section>
-            
 
-  
+<div id="sortOptions>
+    <select id="sortFilter">
+        <option value="Chronological">Chronological Order</option>
+        <option value="Alphabetical">Alphabetical Order</option>
+        <option value="Ratings">Ratings-Based Order</option>
+    </select>
+</div>
+
 
 <div class="review">
     <h1><b>Happy Fish</b></h1>
