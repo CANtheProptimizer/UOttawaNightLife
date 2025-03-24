@@ -288,9 +288,9 @@ const comparators = {
   Ratings: (a,b) => b.rating - a.rating
 };
 
-  function sortReviews(criterion) {
+  function sortReviews(sortBy) {
     const reviews = getReviews();
-    displayReviews(reviews.sort(comparators[criterion]));
+    displayReviews(reviews.sort(comparators[sortBy]));
   }
 
 document.getElementById("sortFilter").addEventListener("change", (e) => sortReviews(e.target.value));
