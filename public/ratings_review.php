@@ -67,7 +67,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
 <div class="review">
-    <h1><b>Happy Fish</b></h1>
+    <h1><b>Happy Fish</b></h1> data-add-date="2025-03-01" data-rating="3.7" 
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Dancing</p>
     <p>"Great spot but way too full for the size of the place most times"</p>
@@ -76,7 +76,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
 <div class="review">
-    <h1><b>Heart & Crown</b></h1>
+    <h1><b>Heart & Crown</b></h1> data-add-date="2025-03-02" data-rating="4.2"
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Fireplace</p>
     <p>"Enjoyed the live music here on a Sunday. Prices are a bit high for a pub, but the cocktails we ordered all tasted great."</p>
