@@ -186,7 +186,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-          <div class="review">
+            <div class="review" data-add-date="2025-03-06" data-rating="3.0">
     <h1><b>Wise Town Cafe</b></h1>
     <p>Rating: ★★★☆☆</p>
     <p>Coffee & Tea, Lounges, Sandwhiches</p>
@@ -194,7 +194,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-<div class="review">
+            <div class="review" data-add-date="2025-03-07" data-rating="5.0">
     <h1><b>Equator Coffee</b></h1>
     <p>Rating: ★★★★★</p>
     <p>Coffee & Tea</p>
@@ -202,7 +202,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-<div class="review">
+          <div class="review" data-add-date="2025-03-07" data-rating="3.3">
     <h1><b>Little Victories Coffee Roasters</b></h1>
     <p>Rating: ★★★☆☆</p>
     <p>Coffee & Tea, Lounges, Coffee Roasteries</p>
@@ -210,7 +210,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-<div class="review">
+          <div class="review" data-add-date="2025-03-07" data-rating="4.3">
     <h1><b>Happy Goat Coffee Company</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Coffee & Tea</p>
@@ -218,7 +218,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-<div class="review">
+          <div class="review" data-add-date="2025-03-08" data-rating="4.4">
     <h1><b>The Ministry of Coffee</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Coffee & Tea</p>
@@ -226,15 +226,15 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-<div class="review">
+        `<div class="review" data-add-date="2025-03-09" data-rating="4.5">
     <h1><b>Drip House</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Coffee & Tea</p>
-    <p>"It's very pretty and spacious inside. Definitely a great cafe to hangout it. I've had a few items from here. Their blueberry muffin ($3.50) was super moist and very tasty. "</p>
+    <p>"It's very pretty and spacious inside. Definitely a great cafe to hangout in. I've had a few items from here. Their blueberry muffin ($3.50) was super moist and very tasty. "</p>
     <p>Price: $$$</p>
 </div>  
 
-<div class="review">
+        <div class="review" data-add-date="2025-03-10" data-rating="4.1">
     <h1><b>El Camino</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Coffee & Tea</p>
@@ -242,7 +242,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$$</p>
 </div>  
 
-< class="review">
+          <div class="review" data-add-date="2025-03-10" data-rating="4.5">
     <h1><b>The Brig Pub</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Pubs, American, Canadian</p>
@@ -251,7 +251,7 @@ if (!isset($_SESSION['user_id'])) {
 
 </div>  
 
-<div class="review">
+          <div class="review" data-add-date="2025-03-10" data-rating="3.5">
     <h1><b>Father & Sons</b></h1>
     <p>Rating: ★★★☆☆</p>
     <p>Pubs, Breakfast & Brunch, Canadian</p>
@@ -259,7 +259,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-<div class="review">
+          <div class="review" data-add-date="2025-03-10" data-rating="3.3">
     <h1><b>The Grand Pizzeria</b></h1>
     <p>Rating: ★★★☆☆</p>
     <p>Italian, Pizza, Bars</p>
