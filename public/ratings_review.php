@@ -267,6 +267,11 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
+<script>
+
+
+  
+</script>
   </body>
 </html>
   
