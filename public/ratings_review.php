@@ -141,7 +141,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
   
-          <div class="review">
+          <div class="review"> data-add-date="2025-03-09" data-rating="4.6"
     <h1><b>House of TARG</b></h1>
     <p>Rating: ★★★★★</p>
     <p>Great cocktails, Live performances, Dancing</p>
@@ -149,7 +149,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
 
-          <div class="review">
+          <div class="review"> data-add-date="2025-03-10" data-rating="4.4"
     <h1><b>Hangout</b></h1>
     <p>Rating: </p>
     <p>Bubble Tea, Shaved Ice, & Brick Toasts with board and arcade games</p>
@@ -158,7 +158,7 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
 
-          <div class="review">
+          <div class="review"> data-add-date="2025-03-10" data-rating="4.8"
     <h1><b>The Gilmour</b></h1>
     <p>Rating: ★★★★★</p>
     <p>Outdoor seating, Great cocktails, Live music</p>
@@ -166,7 +166,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-            <div class="review">
+            <div class="review"> data-add-date="2025-03-11" data-rating="4.4"
     <h1><b>Manor Lounge</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Happy hour food, Great cocktails, Vegan options</p>
