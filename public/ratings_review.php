@@ -66,8 +66,8 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
 
-<div class="review">
-    <h1><b>Happy Fish</b></h1> data-add-date="2025-03-01" data-rating="3.7" 
+<div class="review"> data-add-date="2025-03-01" data-rating="3.7" 
+    <h1><b>Happy Fish</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Dancing</p>
     <p>"Great spot but way too full for the size of the place most times"</p>
@@ -75,8 +75,8 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
 
-<div class="review">
-    <h1><b>Heart & Crown</b></h1> data-add-date="2025-03-02" data-rating="4.2"
+<div class="review"> data-add-date="2025-03-02" data-rating="4.2"
+    <h1><b>Heart & Crown</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Fireplace</p>
     <p>"Enjoyed the live music here on a Sunday. Prices are a bit high for a pub, but the cocktails we ordered all tasted great."</p>
@@ -84,23 +84,23 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
 
-<div class="review">
-    <h1><b>Lieutenant's Pump</b></h1> data-add-date="2025-03-02" data-rating="4.3"
+<div class="review"> data-add-date="2025-03-02" data-rating="4.3"
+    <h1><b>Lieutenant's Pump</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Trivia Night</p>
     <p>"Classic Brit-Canadian pub. It's much larger than it looks from the outside. Very dark inside but friendly atmosphere. Good pub fare and great pints."</p>
     <p>Price: $$ - $$$</p>
 </div>
 
-  <div class="review">
-    <h1><b>El Furniture warehouse</b></h1> data-add-date="2025-03-03" data-rating="4.0"
+  <div class="review"> data-add-date="2025-03-03" data-rating="4.0"
+    <h1><b>El Furniture warehouse</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Happy hour food, Great cocktails, Doesn't accept reservations</p>
     <p>"Nice place to have some drinks and hang out. Prices are decent. Only negative was the Food was alright at best."</p>
     <p>Price: $ </p>
 </div>
 
-    <div class="review">
+    <div class="review"> data-add-date="2025-03-04" data-rating="4.7"
     <h1><b>The Nelson Pub & Eatery</b></h1> 
     <p>Rating: ★★★★★</p>
     <p>Great cocktails, Good for watching sports, Wi-Fi</p>
