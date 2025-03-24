@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html lang="en">
   <head>
-    <Meta charset="UTF-8"
+    <Meta charset="UTF-8">
       <Meta name="viewport", content="width=device-width, height="device-height", initial-scale="1.0">
     <title> uOttawa NightLife </title>
   <style>
@@ -57,7 +57,7 @@ if (!isset($_SESSION['user_id'])) {
             <h1><center>uOttawa NightLife Reviews</center></h1>
 </section>
 
-<div id="sortOptions>
+<div id="sortOptions">
     <select id="sortFilter">
         <option value="Chronological">Chronological Order</option>
         <option value="Alphabetical">Alphabetical Order</option>
@@ -65,8 +65,7 @@ if (!isset($_SESSION['user_id'])) {
     </select>
 </div>
 
-
-<div class="review"> data-add-date="2025-03-01" data-rating="3.7" 
+<div class="review" data-add-date="2025-03-01" data-rating="3.7">
     <h1><b>Happy Fish</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Dancing</p>
@@ -75,7 +74,7 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
 
-<div class="review"> data-add-date="2025-03-02" data-rating="4.2"
+<div class="review" data-add-date="2025-03-02" data-rating="4.2">
     <h1><b>Heart & Crown</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Fireplace</p>
@@ -84,7 +83,7 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
 
-<div class="review"> data-add-date="2025-03-02" data-rating="4.3"
+<div class="review" data-add-date="2025-03-02" data-rating="4.3">
     <h1><b>Lieutenant's Pump</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Trivia Night</p>
@@ -92,7 +91,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
 
-  <div class="review"> data-add-date="2025-03-03" data-rating="4.0"
+  <div class="review" data-add-date="2025-03-03" data-rating="4.0">
     <h1><b>El Furniture warehouse</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Happy hour food, Great cocktails, Doesn't accept reservations</p>
@@ -100,7 +99,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $ </p>
 </div>
 
-    <div class="review"> data-add-date="2025-03-04" data-rating="4.7"
+    <div class="review" data-add-date="2025-03-04" data-rating="4.7">
     <h1><b>The Nelson Pub & Eatery</b></h1> 
     <p>Rating: ★★★★★</p>
     <p>Great cocktails, Good for watching sports, Wi-Fi</p>
@@ -108,7 +107,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>
 
-      <div class="review"> data-add-date="2025-03-05" data-rating="4.0"
+      <div class="review" data-add-date="2025-03-05" data-rating="4.0">
     <h1><b>Pub 101</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Easygoing bar, TVs, Patio, Karaoke</p>
@@ -116,7 +115,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>
 
-        <div class="review"> data-add-date="2025-03-06" data-rating="3.8"
+        <div class="review" data-add-date="2025-03-06" data-rating="3.8">
     <h1><b>Lowertown Brewery, Byward Market</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Vegetarian Options</p>
@@ -124,7 +123,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
 
-          <div class="review"> data-add-date="2025-03-07" data-rating="4.2"
+          <div class="review" data-add-date="2025-03-07" data-rating="4.2">
     <h1><b>The Senate Tavern on Clarencet</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Cozy, Sports-themed, Canadian pub grub & draft beers</p>
@@ -132,7 +131,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
 
-          <div class="review"> data-add-date="2025-03-08" data-rating="4.6"
+          <div class="review" data-add-date="2025-03-08" data-rating="4.6">
     <h1><b>Level One Game Pub</b></h1>
     <p>Rating: ★★★★★</p>
     <p>Great cocktails, Vegan options, Live music</p>
@@ -141,7 +140,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
   
-          <div class="review"> data-add-date="2025-03-09" data-rating="4.6"
+          <div class="review" data-add-date="2025-03-09" data-rating="4.6">
     <h1><b>House of TARG</b></h1>
     <p>Rating: ★★★★★</p>
     <p>Great cocktails, Live performances, Dancing</p>
@@ -149,16 +148,16 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
 
-          <div class="review"> data-add-date="2025-03-10" data-rating="4.4"
+          <div class="review" data-add-date="2025-03-10" data-rating="4.4">
     <h1><b>Hangout</b></h1>
-    <p>Rating: </p>
+    <p>Rating: ★★★★☆</p>
     <p>Bubble Tea, Shaved Ice, & Brick Toasts with board and arcade games</p>
     <p>"This is a really interesting, and AFFORDABLE, place to hang out. I love the intersection of niches that are found here:  boardgames, ramen, and bumble tea :)"</p>
     <p>Price: $</p>
 </div>
 
 
-          <div class="review"> data-add-date="2025-03-10" data-rating="4.8"
+          <div class="review" data-add-date="2025-03-10" data-rating="4.8">
     <h1><b>The Gilmour</b></h1>
     <p>Rating: ★★★★★</p>
     <p>Outdoor seating, Great cocktails, Live music</p>
@@ -166,7 +165,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>  
 
-            <div class="review"> data-add-date="2025-03-11" data-rating="4.4"
+            <div class="review" data-add-date="2025-03-11" data-rating="4.4">
     <h1><b>Manor Lounge</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Happy hour food, Great cocktails, Vegan options</p>
