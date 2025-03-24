@@ -1,8 +1,8 @@
-<!DOCTYPE html> 
+  <!DOCTYPE html> 
 <html lang="en">
   <head>
-    <Meta charset="UTF-8">
-      <Meta name="viewport", content="width=device-width, height="device-height", initial-scale="1.0">
+    <meta charset="UTF-8">
+      <meta name="viewport", content="width=device-width, height="device-height", initial-scale="1.0">
     <title> uOttawa NightLife </title>
   <style>
 body {
@@ -33,7 +33,13 @@ section {
     padding: 10px 20px; 
     border-radius: 5px; 
     font-family: 'Poppins', sans-serif;
-}    
+} 
+.review {
+    padding: 10px;
+    background-color: ##878a8c;
+    border-radius: 5px;
+    margin: 20px;
+}
 #sortOptions {
     text-align: center;
     background-color:#878a8c;
