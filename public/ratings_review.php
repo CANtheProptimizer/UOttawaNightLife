@@ -36,7 +36,7 @@ section {
 } 
 .review {
     padding: 10px;
-    background-color: ##878a8c;
+    background-color: #edeff0;
     border-radius: 5px;
     margin: 20px;
 }
@@ -77,7 +77,8 @@ if (!isset($_SESSION['user_id'])) {
     </select>
 </div>
 
-<div class="review" data-add-date="2025-03-01" data-rating="3.7">
+<div id="nightlifeReviews">  
+  <div class="review" data-add-date="2025-03-01" data-rating="3.7">
     <h1><b>Happy Fish</b></h1> 
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Dancing</p>
