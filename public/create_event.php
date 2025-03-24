@@ -17,15 +17,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $event_name  = trim($_POST['event_name'] ?? '');
     $event_date  = trim($_POST['event_date'] ?? '');
     $description = trim($_POST['description'] ?? '');
+    $location    = trim($_POST['location'] ?? '');
 
-    // Minimal server-side validation
-    if (empty($event_name) || empty($event_date) || empty($description)) {
+    // Minimal server-side validation: check that no field is empty.
+    if (empty($event_name) || empty($event_date) || empty($description) || empty($location)) {
         $feedback = "Please fill in all required fields.";
     } else {
         try {
-            // Updated query includes user_id to satisfy the foreign key constraint.
+            // Insert event into database, including the location provided by the user.
             $stmt = $pdo->prepare("INSERT INTO events (user_id, title, event_date, description, location) VALUES (?, ?, ?, ?, ?)");
-            $stmt->execute([$_SESSION['user_id'], $event_name, $event_date, $description, 'Unknown']);
+            $stmt->execute([$_SESSION['user_id'], $event_name, $event_date, $description, $location]);
             $feedback = "Event created successfully!";
         } catch (PDOException $e) {
             $feedback = "Database error: " . $e->getMessage();
@@ -87,6 +88,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div>
                 <label for="event_date">Event Date:</label>
                 <input type="date" id="event_date" name="event_date" required>
+            </div>
+            <div>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
             </div>
             <div>
                 <label for="description">Event Description:</label>

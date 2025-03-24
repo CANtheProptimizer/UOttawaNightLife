@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Find the reviews container for this event
                 const reviewsContainer = document.getElementById('reviews_' + eventId);
                 if (reviewsContainer) {
-                    // If the container shows a "No reviews yet" message, replace it with a header
+                    
                     if (reviewsContainer.textContent.includes("No reviews yet")) {
                         reviewsContainer.innerHTML = "<h4>Reviews:</h4>";
                     }
-                    // Append the new review HTML to the container
+                    
                     reviewsContainer.innerHTML += data;
                 }
                 // Optionally reset the form after submission
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //create event
-
 document.addEventListener('DOMContentLoaded', function () {
     // Get the Create Event form
     const createEventForm = document.getElementById('createEventForm');
@@ -50,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const eventName = document.getElementById('event_name').value.trim();
             const eventDate = document.getElementById('event_date').value;
             const description = document.getElementById('description').value.trim();
+            const location = document.getElementById('location').value.trim();
 
             // Check that the event name is at least 3 characters long
             if (eventName.length < 3) {
@@ -67,6 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Check that the description is at least 10 characters long
             if (description.length < 10) {
                 alert("Description must be at least 10 characters long.");
+                e.preventDefault();
+                return;
+            }
+            // Check that the location is not empty
+            if (location.length === 0) {
+                alert("Please enter a location.");
                 e.preventDefault();
                 return;
             }
