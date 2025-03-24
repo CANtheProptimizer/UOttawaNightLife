@@ -34,6 +34,12 @@ section {
     border-radius: 5px; 
     font-family: 'Poppins', sans-serif;
 }    
+#sortOptions {
+    text-align: center;
+    background-color:#878a8c;
+    border-radius: 5px;
+    margin: 20px;
+}
     </style>
   </head>
 
