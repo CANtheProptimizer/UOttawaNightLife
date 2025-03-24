@@ -108,7 +108,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>
 
-      <div class="review">
+      <div class="review"> data-add-date="2025-03-05" data-rating="4.0"
     <h1><b>Pub 101</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Easygoing bar, TVs, Patio, Karaoke</p>
@@ -116,7 +116,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$</p>
 </div>
 
-        <div class="review">
+        <div class="review"> data-add-date="2025-03-06" data-rating="3.8"
     <h1><b>Lowertown Brewery, Byward Market</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Outdoor seating, Great cocktails, Vegetarian Options</p>
@@ -124,7 +124,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
 
-          <div class="review">
+          <div class="review"> data-add-date="2025-03-07" data-rating="4.2"
     <h1><b>The Senate Tavern on Clarencet</b></h1>
     <p>Rating: ★★★★☆</p>
     <p>Cozy, Sports-themed, Canadian pub grub & draft beers</p>
@@ -132,7 +132,7 @@ if (!isset($_SESSION['user_id'])) {
     <p>Price: $$ - $$$</p>
 </div>
 
-          <div class="review">
+          <div class="review"> data-add-date="2025-03-08" data-rating="4.6"
     <h1><b>Level One Game Pub</b></h1>
     <p>Rating: ★★★★★</p>
     <p>Great cocktails, Vegan options, Live music</p>
