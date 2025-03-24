@@ -2,10 +2,10 @@
 // index.php - Single page for listing, reviewing, and rating events
 
 session_start();
-require_once '../includes/config.php';   // Provides $pdo
-require_once '../includes/session.php';  // Starts session, etc.
+require_once '../includes/config.php';   
+require_once '../includes/session.php';  
 
-// 1. Ensure user is logged in
+// Ensure user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: auth.php");
     exit;
@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 $feedback = '';
 
-// 2. Handle rating/review submission (for non-AJAX fallback)
+// Handle rating/review submission 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['event_id'], $_POST['rating_value'])) {
     $event_id     = $_POST['event_id'];
     $rating_value = (int)$_POST['rating_value'];
@@ -38,9 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['event_id'], $_POST['r
     }
 }
 
-// 3. Fetch all events (with average rating)
+// Fetch all events
 try {
-    // We'll do a subquery to get the average rating for each event
+    // Using a subquery to get the average rating for each event
     $sql = "
         SELECT e.*,
                (SELECT AVG(r.rating_value) 
@@ -56,7 +56,7 @@ try {
     die("Database error: " . $e->getMessage());
 }
 
-// 4. Helper function to fetch reviews for each event
+// fetch reviews
 function fetchReviews($pdo, $event_id) {
     $sql = "
         SELECT r.*, u.full_name
@@ -78,7 +78,7 @@ function fetchReviews($pdo, $event_id) {
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-    <!-- Include your navbar -->
+    
     <?php include '../includes/navbar.php'; ?>
 
     <div class="flexbox">
@@ -88,17 +88,29 @@ function fetchReviews($pdo, $event_id) {
     </div>
     
     <div class="container">
-
-        <!-- Display feedback  -->
+       
         <?php if (!empty($feedback)): ?>
             <p style="color: green;"><?php echo htmlspecialchars($feedback); ?></p>
         <?php endif; ?>
 
+        <!-- Sorting Controls -->
+        <div class="sort-controls">
+            <label for="sortOptions">Sort by:</label>
+            <select id="sortOptions">
+                <option value="date">Date (Chronological)</option>
+                <option value="title">Title (Alphabetical)</option>
+                <option value="rating">Rating (Highest First)</option>
+            </select>
+        </div>
+
         <!-- List all events -->
         <?php if (!empty($events)): ?>
-            <ul style="list-style-type: none; padding: 0;">
+            <ul id="eventListContainer" style="list-style-type: none; padding: 0;">
                 <?php foreach ($events as $event): ?>
-                    <li class="eventListItem">
+                    <li class="eventListItem"
+                        data-title="<?php echo htmlspecialchars($event['title']); ?>"
+                        data-date="<?php echo htmlspecialchars($event['event_date']); ?>"
+                        data-rating="<?php echo $event['avg_rating'] ? number_format($event['avg_rating'], 1) : 0; ?>">
                         <h3><?php echo htmlspecialchars($event['title']); ?></h3>
                         <p><?php echo htmlspecialchars($event['description']); ?></p>
                         <p><strong>Location:</strong> <?php echo htmlspecialchars($event['location']); ?></p>

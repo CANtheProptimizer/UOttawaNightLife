@@ -1,23 +1,23 @@
-//ajax
+//Asynchronous review submission
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all review forms on the page
+    
     const reviewForms = document.querySelectorAll('.reviewForm');
     
     reviewForms.forEach(function(form) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop the form from submitting normally
+            e.preventDefault(); 
             const formData = new FormData(form);
             const eventId = formData.get('event_id');
 
-            // Send the review data using fetch to the PHP endpoint
+            
             fetch('ajax_submit_review.php', {
                 method: 'POST',
                 body: formData
             })
             .then(response => response.text())
             .then(data => {
-                // Find the reviews container for this event
+                
                 const reviewsContainer = document.getElementById('reviews_' + eventId);
                 if (reviewsContainer) {
                     
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     reviewsContainer.innerHTML += data;
                 }
-                // Optionally reset the form after submission
+                
                 form.reset();
             })
             .catch(error => {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.preventDefault();
                 return;
             }
-            // Check that the description is at least 10 characters long
+            // Check that description is at least 10 characters long
             if (description.length < 10) {
                 alert("Description must be at least 10 characters long.");
                 e.preventDefault();
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Add a real-time character counter for the event description
+        //character counter for the event description
         const descriptionField = document.getElementById('description');
         const charCounter = document.getElementById('charCounter');
         if (descriptionField && charCounter) {
@@ -86,5 +86,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 charCounter.textContent = descriptionField.value.length + " characters";
             });
         }
+    }
+});
+
+
+//homepage (index.php) event sorting
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    const sortSelect = document.getElementById('sortOptions');
+    const eventListContainer = document.getElementById('eventListContainer');
+    
+    if (sortSelect && eventListContainer) {
+        sortSelect.addEventListener('change', function() {
+            const criteria = sortSelect.value;
+            const items = Array.from(eventListContainer.querySelectorAll('.eventListItem'));
+            
+            items.sort(function(a, b) {
+                if (criteria === 'title') {
+                    
+                    return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'));
+                } else if (criteria === 'date') {
+                    
+                    return new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'));
+                } else if (criteria === 'rating') {
+                    
+                    return parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating'));
+                }
+            });
+            
+            
+            eventListContainer.innerHTML = '';
+            items.forEach(function(item) {
+                eventListContainer.appendChild(item);
+            });
+        });
     }
 });

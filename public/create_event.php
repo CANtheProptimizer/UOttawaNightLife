@@ -2,8 +2,8 @@
 // create_event.php - Page for creating a new event
 
 session_start();
-require_once '../includes/config.php';   // Provides $pdo
-require_once '../includes/session.php';  // Manages session, etc.
+require_once '../includes/config.php';   
+require_once '../includes/session.php';  
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: auth.php");
@@ -19,12 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $description = trim($_POST['description'] ?? '');
     $location    = trim($_POST['location'] ?? '');
 
-    // Minimal server-side validation: check that no field is empty.
+    // check that no field is empty.
     if (empty($event_name) || empty($event_date) || empty($description) || empty($location)) {
         $feedback = "Please fill in all required fields.";
     } else {
         try {
-            // Insert event into database, including the location provided by the user.
+            // Insert event into database
             $stmt = $pdo->prepare("INSERT INTO events (user_id, title, event_date, description, location) VALUES (?, ?, ?, ?, ?)");
             $stmt->execute([$_SESSION['user_id'], $event_name, $event_date, $description, $location]);
             $feedback = "Event created successfully!";

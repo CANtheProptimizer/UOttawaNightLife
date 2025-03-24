@@ -1,7 +1,7 @@
 <?php
 // search_events.php
 
-//  Start session & check if user is logged in
+//  Start session and check if user is logged in
 require_once '../includes/session.php'; 
 if (!isset($_SESSION['user_id'])) {
     header("Location: auth.php");
@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 $feedback = '';
 
-//  Set up MySQLi connection
+//  Set up sql connection
 $servername = "localhost";
 $username   = "root";
 $password   = "";
@@ -22,7 +22,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-//  Process rating/review submission if POST exists
+//  Process rating/review submission 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['event_id'], $_POST['rating_value'])) {
     $event_id     = $_POST['event_id'];
     $rating_value = intval($_POST['rating_value']);
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['event_id'], $_POST['r
     }
 }
 
-//  Process search query (GET request)
+//  Process search query 
 $search_keyword = '';
 $events = [];
 if ($_SERVER["REQUEST_METHOD"] === "GET" && !empty($_GET['keyword'])) {
@@ -93,7 +93,7 @@ function fetchReviews($conn, $event_id) {
 <head>
     <meta charset="UTF-8">
     <title>Search Events</title>
-    <!-- Adjust the path to your CSS if needed -->
+   
     <link rel="stylesheet" href="assets/styles.css">
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
@@ -107,18 +107,18 @@ function fetchReviews($conn, $event_id) {
     </style>
 </head>
 <body>
-    <!--  Include your navbar -->
+   
     <?php require_once '../includes/navbar.php'; ?>
 
     <div class="container">
         <h2>Search Events</h2>
 
-        <!-- Display any feedback messages -->
+        
         <?php if (!empty($feedback)): ?>
             <p style="color: green;"><?php echo htmlspecialchars($feedback); ?></p>
         <?php endif; ?>
 
-        <!-- Search form -->
+        
         <form method="GET" class="search-box">
             <input 
                 type="text" 
@@ -129,7 +129,7 @@ function fetchReviews($conn, $event_id) {
             <button type="submit">Search</button>
         </form>
         
-        <!-- Display search results -->
+        
         <?php if (!empty($events)): ?>
             <h3>Search Results:</h3>
             <?php foreach ($events as $event): ?>
