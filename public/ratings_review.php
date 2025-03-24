@@ -268,10 +268,36 @@ if (!isset($_SESSION['user_id'])) {
 </div>  
 
 <script>
+function getReviews() {
+    const reviewElements = document.querySelectorAll(".reviews");
+    return Array.from(reviewElements).map(review => ({
+    element: review, 
+    name: review.querySelector("h1").textContent.replace("",""),
+    date: review.getAttribute("data-add-date"),
+    rating: parseFloat(review.getAttribute("data-rating"))
+}))
 
+function displayReviews(reviews) {
+    const list = document.getElementById("nightlifeReviews");
+    list.innerHTML = "";
+    reviews.forEach(review => list.appendChild(review.element));
+}
 
-  
-</script>
+const comparators = {
+  Chronological: (a, b) =>new Date(a.date) - new Date(b.date),
+  Alphabetical: (a, b) => a.name.localeCompare(b.name),
+  Ratings: (a,b) => b.rating - a.rating
+    }
+
+  function sortReviews(criterion) {
+    const reviews = getReviews();
+    displayReviews(reviews.sort(comparators[criterion]));
+  }
+
+document.getElementById("sortFilter").addEventListener("change", (e) => sortReviews(e.target.value);
+displayReviews(getReviews());
+
+    </script>
   </body>
 </html>
   
