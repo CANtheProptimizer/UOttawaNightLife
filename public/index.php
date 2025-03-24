@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 $feedback = '';
 
-// 2. Handle rating/review submission
+// 2. Handle rating/review submission (for non-AJAX fallback)
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['event_id'], $_POST['rating_value'])) {
     $event_id     = $_POST['event_id'];
     $rating_value = (int)$_POST['rating_value'];
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['event_id'], $_POST['r
 
 // 3. Fetch all events (with average rating)
 try {
-    // We'll do a LEFT JOIN or subquery to get the average rating
+    // We'll do a subquery to get the average rating for each event
     $sql = "
         SELECT e.*,
                (SELECT AVG(r.rating_value) 
@@ -75,7 +75,6 @@ function fetchReviews($pdo, $event_id) {
 <head>
     <meta charset="UTF-8">
     <title>All Events - Rate & Review</title>
-   
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
@@ -84,7 +83,6 @@ function fetchReviews($pdo, $event_id) {
 
     <div class="flexbox">
         <h1 id="allEventsHeader">All Events</h1>
-
         <!-- Link to create a new event -->
         <a href="create_event.php" id="createEventLink">Create a New Event</a>
     </div>
@@ -115,52 +113,47 @@ function fetchReviews($pdo, $event_id) {
                         }
                         ?>
 
-                        <!-- Fetch and display existing reviews for this event -->
-                        <?php
-                        $reviews = fetchReviews($pdo, $event['event_id']);
-                        if ($reviews):
-                            echo "<h4>Reviews:</h4>";
-                            foreach ($reviews as $rev):
-                                ?>
-                                <div style="border: 1px solid #ddd; margin: 5px 0; padding: 10px;">
-                                    <p><strong><?php echo htmlspecialchars($rev['full_name']); ?></strong> 
-                                       rated it <?php echo (int)$rev['rating_value']; ?>/5</p>
-                                    <?php if (!empty($rev['comment'])): ?>
-                                        <p>"<?php echo htmlspecialchars($rev['comment']); ?>"</p>
-                                    <?php endif; ?>
-                                    <small>Posted on: <?php echo htmlspecialchars($rev['created_at']); ?></small>
-                                </div>
-                                <?php
-                            endforeach;
-                        else:
-                            echo "<p>No reviews yet. Be the first to review!</p>";
-                        endif;
-                        ?>
-
-                        <!-- Inline rating & review form -->
+                        <!-- Reviews container with unique ID -->
+                        <div id="reviews_<?php echo $event['event_id']; ?>">
+                            <?php 
+                            $reviews = fetchReviews($pdo, $event['event_id']);
+                            if ($reviews):
+                                echo "<h4>Reviews:</h4>";
+                                foreach ($reviews as $rev):
+                            ?>
+                                    <div class="review" style="border: 1px solid #ddd; margin: 5px 0; padding: 10px;">
+                                        <p><strong><?php echo htmlspecialchars($rev['full_name']); ?></strong> 
+                                           rated it <?php echo (int)$rev['rating_value']; ?>/5</p>
+                                        <?php if (!empty($rev['comment'])): ?>
+                                            <p>"<?php echo htmlspecialchars($rev['comment']); ?>"</p>
+                                        <?php endif; ?>
+                                        <small>Posted on: <?php echo htmlspecialchars($rev['created_at']); ?></small>
+                                    </div>
+                            <?php 
+                                endforeach;
+                            else:
+                                echo "<p>No reviews yet. Be the first to review!</p>";
+                            endif;
+                            ?>
+                        </div>
+                        
+                        <!-- Inline rating & review form with class "reviewForm" for AJAX -->
                         <h4>Rate & Review This Event</h4>
-                        <form method="POST" action="">
-                            
+                        <form method="POST" action="" class="reviewForm">
                             <input type="hidden" name="event_id" value="<?php echo $event['event_id']; ?>">
-
-                            <label for="rating_value_<?php echo $event['event_id']; ?>">
-                                Rating (1-5):
-                            </label>
+                            <label for="rating_value_<?php echo $event['event_id']; ?>">Rating (1-5):</label>
                             <input type="number" 
                                    id="rating_value_<?php echo $event['event_id']; ?>" 
                                    name="rating_value" 
                                    min="1" max="5" 
                                    required>
                             <br><br>
-
                             <label for="comment_<?php echo $event['event_id']; ?>">Comment:</label><br>
                             <textarea id="comment_<?php echo $event['event_id']; ?>" 
                                       name="comment" 
                                       rows="3" 
-                                      cols="50">
-                            </textarea>
+                                      cols="50"></textarea>
                             <br><br>
-
                             <button type="submit">Submit</button>
                         </form>
                     </li>
@@ -169,7 +162,8 @@ function fetchReviews($pdo, $event_id) {
         <?php else: ?>
             <p>No events found. Create one!</p>
         <?php endif; ?>
-
     </div>
+
+    <script src="../assets/script.js"></script>
 </body>
 </html>
