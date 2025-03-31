@@ -1,9 +1,9 @@
 <?php
-// index.php - Single page for listing, reviewing, and rating events
+// index.php - Single page for listing, reviewing, rating, and now deleting events
 
 session_start();
-require_once '../includes/config.php';   
-require_once '../includes/session.php';  
+require_once '../includes/config.php';
+require_once '../includes/session.php';
 
 // Ensure user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['event_id'], $_POST['r
     }
 }
 
-// Fetch all events
+// Fetch all events (including user_id so we can check ownership)
 try {
     // Using a subquery to get the average rating for each event
     $sql = "
@@ -56,7 +56,7 @@ try {
     die("Database error: " . $e->getMessage());
 }
 
-// fetch reviews
+// Fetch reviews helper function
 function fetchReviews($pdo, $event_id) {
     $sql = "
         SELECT r.*, u.full_name
@@ -74,7 +74,7 @@ function fetchReviews($pdo, $event_id) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>All Events - Rate & Review</title>
+    <title>All Events - Rate, Review & Delete</title>
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
@@ -168,6 +168,14 @@ function fetchReviews($pdo, $event_id) {
                             <br><br>
                             <button type="submit">Submit</button>
                         </form>
+                        
+                        <!-- Delete button: show only if the event was created by the logged-in user -->
+                        <?php if (isset($event['user_id']) && $event['user_id'] == $_SESSION['user_id']): ?>
+                            <form method="POST" action="delete_event.php" onsubmit="return confirm('Are you sure you want to delete this event?');" style="margin-top: 10px;">
+                                <input type="hidden" name="event_id" value="<?php echo $event['event_id']; ?>">
+                                <button type="submit" class="deleteEventBtn" style="background-color: #d9534f; color: #fff; border: none; padding: 5px 10px; cursor: pointer;">Delete Event</button>
+                            </form>
+                        <?php endif; ?>
                     </li>
                 <?php endforeach; ?>
             </ul>
